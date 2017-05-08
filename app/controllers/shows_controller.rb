@@ -9,4 +9,9 @@ class ShowsController < ApplicationController
     render :json => shows
   end
 
+  def show
+    show = Show.find(params[:id])
+    render :json => show
+  end
+
 end
