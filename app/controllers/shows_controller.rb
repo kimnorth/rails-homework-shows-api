@@ -14,4 +14,9 @@ class ShowsController < ApplicationController
     render :json => show
   end
 
+  def create
+    show = Show.create(shows_params)
+    render :json => show
+  end
+
 end
