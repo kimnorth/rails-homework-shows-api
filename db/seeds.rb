@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Show.delete_all
-
+User.delete_all
 # shows
 
 Show.create([{
@@ -38,3 +38,10 @@ Show.create([{
 
 # Users
 
+User.create({
+  name: "Kim North"
+  })
+
+User.create({
+  name: "Kirsty Dunsmore"
+  })
