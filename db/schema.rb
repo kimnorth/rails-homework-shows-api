@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20170509141838) do
 
   create_table "favourite_shows", force: :cascade do |t|
-    t.integer  "user_id_id"
-    t.integer  "show_id_id"
+    t.integer  "user_id"
+    t.integer  "show_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "favourite_shows", ["show_id_id"], name: "index_favourite_shows_on_show_id_id"
-  add_index "favourite_shows", ["user_id_id"], name: "index_favourite_shows_on_user_id_id"
+  add_index "favourite_shows", ["show_id"], name: "index_favourite_shows_on_show_id"
+  add_index "favourite_shows", ["user_id"], name: "index_favourite_shows_on_user_id"
 
   create_table "shows", force: :cascade do |t|
     t.string   "title"

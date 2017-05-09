@@ -6,42 +6,58 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+FavouriteShow.delete_all
 Show.delete_all
 User.delete_all
 # shows
 
-Show.create([{
+s1 = Show.create({
   title: "Veep",
   series: 1,
   description: "Vice-president Selina Meyer's latest escapades.",
   image: "http://tvseriesfinale.com/wp-content/uploads/2017/04/Veep-TV-show-on-HBO-canceled-or-season-7-canceled-or-renewed-Vulture-Watch.jpg",
   programmeID: "1"
-  },
+    }
+  )
 
-  {
+s2 = Show.create(
+    {
     title: "The Wire",
     series: 1,
     description: "The ultimate TV show.",
     image: "http://vignette4.wikia.nocookie.net/thewire/images/a/af/The_Wire_Cover.jpg/revision/latest?cb=20150202124315",
     programmeID: "2"
-  },
+    }
+  )
 
-  {
+s3 = Show.create( 
+    {
     title: "Breaking Bad",
     series: 1,
     description: "Former chemistry teacher starts cooking meth.",
     image: "https://upload.wikimedia.org/wikipedia/en/6/61/Breaking_Bad_title_card.png",
     programmeID: "3"
-  }
-
-  ])
+    }
+  )
 
 # Users
 
-User.create({
+u1 = User.create({
   name: "Kim North"
   })
 
-User.create({
+u2 = User.create({
   name: "Kirsty Dunsmore"
   })
+
+# Favourite Shows
+
+FavouriteShow.create({
+  show: s1,
+  user: u1 
+})
+
+FavouriteShow.create({
+  show: s2,
+  user: u2
+})
