@@ -7,6 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Show.delete_all
+
+# shows
+
 Show.create([{
   title: "Veep",
   series: 1,
@@ -32,3 +35,6 @@ Show.create([{
   }
 
   ])
+
+# Users
+
