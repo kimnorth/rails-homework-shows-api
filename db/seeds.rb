@@ -43,11 +43,15 @@ s3 = Show.create(
 # Users
 
 u1 = User.create({
-  name: "Kim North"
-  })
+  email: 'email@email.com',
+  password: 'password',
+  password_confirmation: 'password'
+})
 
 u2 = User.create({
-  name: "Kirsty Dunsmore"
+  email: 'email2@email.com',
+  password: 'password',
+  password_confirmation: 'password'
   })
 
 # Favourite Shows

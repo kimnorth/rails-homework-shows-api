@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+
+gem 'rack-cors', :require => 'rack/cors'
+# rack-cors gem allows us to multiple origin servers eventually (express & rails)
 gem 'awesome_print'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

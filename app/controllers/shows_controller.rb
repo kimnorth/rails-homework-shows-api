@@ -1,12 +1,15 @@
 class ShowsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def shows_params
     params.require(:show).permit([:title, :series, :description, :image, :programmeID])
   end
 
   def index
-    shows = Show.all
-    render :json => shows
+    # shows = Show.all
+    shows = current_user.favourite_shows
+    render json: shows
   end
 
   def show
